@@ -1,0 +1,14 @@
+<div class="component">
+  phrases-list works!
+  <hr />
+  <ol class="phrases">
+    <li
+      *ngFor="let phrase of phrases"
+      (click)="onSelect(phrase)"
+      [class.selected]="isSelected(phrase)"
+    >
+      {{ phrase.value }}
+    </li>
+  </ol>
+  <router-outlet></router-outlet>
+</div>

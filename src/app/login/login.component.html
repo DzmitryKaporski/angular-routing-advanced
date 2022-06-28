@@ -1,0 +1,22 @@
+<div class="wrap">
+  <div *ngIf="!authService.isLoggedIn">
+    <div class="column">
+      <label for="userLogin">Login</label>
+      <input id="userLogin" type="text" name="userLogin" [(ngModel)]="userLogin" />
+    </div>
+
+    <div class="column">
+      <label for="userPassword">Password</label>
+      <input id="userPassword" type="password" name="userPassword" [(ngModel)]="userPassword" />
+    </div>
+
+    <div>
+      <button type="button" (click)="login()">Login</button>
+    </div>
+  </div>
+
+  <div *ngIf="authService.isLoggedIn">
+    <button type="button" (click)="logout()">Logout</button>
+  </div>
+</div>
+<!-- <p>{{ message }}</p> -->

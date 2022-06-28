@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+nav {
+  display: block;
+  display: flex;
+  justify-content: space-around;
+
+  a:hover {
+    color: red;
+  }
+
+}
+
+.phrases {
+  li {
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      color: red;
+    }
+
+    &.selected {
+      color: brown;
+    }
+  }
+}
+
+button {
+  margin: 1rem 0 1rem 0;
+  padding: 1rem;
+  width: 100%;
+  transition: 0.5s;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px blue;
+
+  &:hover {
+    cursor: pointer;
+    color: red;
+    box-shadow: 0 0 5px red;
+  }
+}
+
+.component {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0 0 5px black;
+}
+
+.admin {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  color: purple;
+  box-shadow: 0 0 5px purple;
+}
+
+input {
+  margin: 1rem;
+  width: 10rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  margin: 10% 0 0 0;
+  display: flex;
+  justify-content: center;
+}

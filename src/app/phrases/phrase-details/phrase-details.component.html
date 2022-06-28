@@ -1,0 +1,34 @@
+<div class="component">
+  phrase-details works!
+  <hr />
+
+  <div *ngIf="phrase">
+    <div>ID:{{ phrase.id }}</div>
+
+    <div *ngIf="authService.isLoggedIn; then isAuth; else notIsAuth"></div>
+
+    <div>
+      <button (click)="gotoPhrasesList()" type="button">Come back</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #isAuth>
+  <div>Value: <input type="text" [(ngModel)]="editValue" /></div>
+  <div>Language: <input type="text" [(ngModel)]="editLanguage" /></div>
+  <div class="relative">
+    <button
+      type="button"
+      class="inline-btn"
+      (click)="save()"
+      *ngIf="isChanged()"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #notIsAuth>
+  <div>Value: {{ phrase?.value }}</div>
+  <div>Language: {{ phrase?.languages }}</div>
+</ng-template>
