@@ -17,18 +17,13 @@
   <div>Value: <input type="text" [(ngModel)]="editValue" /></div>
   <div>Language: <input type="text" [(ngModel)]="editLanguage" /></div>
   <div class="relative">
-    <button
-      type="button"
-      class="inline-btn"
-      (click)="save()"
-      *ngIf="isChanged()"
-    >
+    <button type="button" class="inline-btn" (click)="save()" *ngIf="isChanged()">
       Save
     </button>
   </div>
 </ng-template>
 
 <ng-template #notIsAuth>
-  <div>Value: {{ phrase?.value }}</div>
-  <div>Language: {{ phrase?.languages }}</div>
+  <div>Value: {{ phrase.value }}</div>
+  <div>Language: {{ phrase.languages }}</div>
 </ng-template>
