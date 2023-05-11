@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { Router, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Phrase } from './phrase';
 import { PhraseService } from './phrase.service';
@@ -11,7 +7,7 @@ import { PhraseService } from './phrase.service';
 @Injectable({
   providedIn: 'root',
 })
-export class PhraseDetailsResolver implements Resolve<Phrase | boolean> {
+export class PhraseDetailsResolver  {
 
   constructor(
     private phraseService: PhraseService,
